@@ -9,7 +9,7 @@ import { NoteService } from '../service/note.service';
 })
 export class HomePage {
 
-  constructor(public noteService: NoteService, public mesPhotosService: MesPhotosService) {}
+  constructor(public noteService: NoteService) {}
 
   //Fonction appelé lors de l'initialisation
   ngOnInit() {
@@ -17,13 +17,12 @@ export class HomePage {
     for(let note of this.noteService.listNote) {
       //On modifie la photo en appelant mesPhotosService
       //GetRandomPhoto retourne un chemin d'accès comme "assets/img/photo" de manière aléatoire
-      note.photo = this.mesPhotosService.getRandomPhoto();
+      note.photo = MesPhotosService.getRandomPhoto();
     }
   }
 
   buttonAjoutNote() {
     //Appelé quand on clique sur l'ion-fab
-
-    //Appel noteService pour ajouter une note
+    this.noteService.ajouterNote();
   }
 }
