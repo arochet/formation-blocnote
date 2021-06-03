@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MesPhotosService } from '../service/mesphotos.service';
 import { NoteService } from '../service/note.service';
 
 @Component({

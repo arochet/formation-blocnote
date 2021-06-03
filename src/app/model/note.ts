@@ -6,4 +6,9 @@ export class Note {
         this.titre = t;
         this.photo = "assets/img/vacance1.jpeg";
     }
+
+    renitialiserNote() {
+        this.titre = "";
+        this.photo = "";
+    }
 }
