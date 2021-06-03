@@ -10,14 +10,21 @@
   <div id="gallerie">
 
     <!-- Liste des Notes -->
-    <div class="element" *ngFor="let note of listPhoto">
+    <div class="element" *ngFor="let maNote of noteService.listNote">
       <ion-thumbnail>
-        <img src="assets/img/vacance1.jpeg">
+        <img [src]="maNote.photo">
       </ion-thumbnail>
       <div class="center">
-        <p>{{note}}</p>
+        <p>{{maNote.titre}}</p>
       </div>
     </div>
 
   </div>
+
+  <!-- Bouton d'ajout de nouvelle notes -->
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" (click)="buttonAjoutNote()">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
