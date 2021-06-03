@@ -5,9 +5,17 @@
 .element {
   background-color: grey;
   width: 120px;
+  margin: 10px;//Marge de 10px
 }
 
 .element ion-thumbnail {
+  //Notre image 
   width: 120px;
   height: 120px;
+}
+
+#gallerie {
+  display: flex;//Affiche les div comme des boites
+  justify-content: center;//Centre les boites
+  flex-wrap: wrap;//Evite que les boites dépassent de l'écran
 }
