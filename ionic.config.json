@@ -1,0 +1,7 @@
+{
+  "name": "formation-blocnote",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

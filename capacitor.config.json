@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "formation-blocnote",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
