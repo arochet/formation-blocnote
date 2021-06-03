@@ -13,12 +13,7 @@ export class HomePage {
 
   //Fonction appelé lors de l'initialisation
   ngOnInit() {
-    //Pour chaque note de listNote (dans NoteService)
-    for(let note of this.noteService.listNote) {
-      //On modifie la photo en appelant mesPhotosService
-      //GetRandomPhoto retourne un chemin d'accès comme "assets/img/photo" de manière aléatoire
-      note.photo = MesPhotosService.getRandomPhoto();
-    }
+    this.noteService.loadNote();//Charge les notes dans listNote
   }
 
   buttonAjoutNote() {

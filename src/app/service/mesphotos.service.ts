@@ -1,3 +1,6 @@
+import { Injectable } from "@angular/core";
+
+@Injectable()
 export class MesPhotosService {
     static listChemin: string[] = [
         "assets/img/vacance1.jpeg",
